@@ -1,94 +1,199 @@
 <!DOCTYPE html>
+
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winne Ferreira - Desenvolvedor Mobile Python</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: #f4f4f4;
-            color: #222;
-        }
 
-        header {
-            background: linear-gradient(135deg, #4A00E0, #8E2DE2);
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-        }
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-        header h1 {
-            font-size: 40px;
-            margin-bottom: 10px;
-        }
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #f4f4f4;
+        color: #222;
+    }
 
-        header p {
-            font-size: 18px;
-            opacity: 0.9;
-        }
+    header {
+    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+    padding: 40px 20px;
+    color: white;
 
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-        }
+    position: relative;   /* 🔥 necessário */
+    text-align: center;   /* 🔥 centraliza o texto */
+    }
+    
+    header div:last-child {
+    text-align: center;
+    }
 
-        h2 {
-            color: #4A00E0;
-            font-size: 26px;
-        }
+    header h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
 
-        .projeto {
-            margin-bottom: 25px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #ddd;
-        }
+    header p {
+        font-size: 28px;
+        opacity: 0.9;
+    }
 
-        footer {
-            margin-top: 50px;
-            padding: 20px;
-            background: #4A00E0;
-            color: white;
-            text-align: center;
-        }
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
 
-        .tag {
-            background: #8E2DE2;
-            color: white;
-            padding: 4px 10px;
-            border-radius: 8px;
-            font-size: 12px;
-            margin-right: 6px;
-        }
+    h2 {
+        color: #4A00E0;
+        font-size: 32px;
+    }
+    h3 {
+      font-size: 28px;
+    }
 
-        .links a {
-            text-decoration: none;
-            color: #8E2DE2;
-            font-weight: 600;
-        }
+    .projeto p {
+        margin-bottom: 25px;
+        font-size: 20px;
+        text-align: left;
+    }
+    
+    
+    .projeto::after {
+      content: "";
+      display: block;
+      margin-top: 30px;
+      border-bottom: 1px solid #ddd;
+    }
 
-        .links a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .sobre {
+        font-size: 20px;
+        margin-bottom: 25px;
+        text-align: left;
+    }
+    
+    footer {
+        margin-top: 50px;
+        padding: 20px;
+        background: #4A00E0;
+        color: white;
+        text-align: center;
+    }
+
+    .tag {
+        background: #8E2DE2;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 8px;
+        font-size: 20px;
+        margin-right: 6px;
+    }
+
+    .links a {
+        text-decoration: none;
+        color: #8E2DE2;
+        font-weight: 600;
+    }
+
+    .links a:hover {
+        text-decoration: underline;
+    }
+
+    /* ===== APP AREA ===== */
+
+    .app-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+
+    .app-icon {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+    .app-icon img {
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+    }
+
+
+    .app-images {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    .app-images img {
+        width: 150px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .botao-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;  /* centraliza horizontal */
+    gap: 10px;
+    margin-top: 20px;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+  .botao-download img {
+      width: 35px;
+      height: 35px;
+      border-radius: 6px;
+  }
+
+  .botao-download:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+  
+  }
+</style>
+
+
 </head>
+
 <body>
 
 <header>
+
+  <div class= "app-icon">
+        <img src="https://avatars.githubusercontent.com/u/109382414?v=4&size=400"
+     alt="Foto de perfil do GitHub">
+
+  </div>
+  
+  <div>      
     <h1>Winne Ferreira</h1>
     <p>Desenvolvedor Mobile com Python • Kivy • KivyMD • Firebase • Análise de Dados</p>
+  </div>
 </header>
 
 <section>
     <h2>Sobre mim</h2>
-    <p>
+    <p class="sobre">
         Sou desenvolvedor mobile especializado em criar aplicativos Android usando Python,
         Kivy, KivyMD e Java. Trabalho com estruturas modulares, hot reload personalizado, Firebase,
         OCR, leitura de código de barras, leitura de QR Code da nota fiscal, filtros avançados,
@@ -98,65 +203,107 @@
 
 <section>
     <h2>Projetos</h2>
-    
-    <div class="projeto">
-        <h3>EscalaPlanner</h3>
-        <span class="tag">Java</span>
+
+```
+<!-- ESCALA PLANNER COM DOWNLOAD -->
+<div class="projeto">
+    <h3>EscalaPlanner</h3>
+    <span class="tag">Java</span>
+
+    <div class="app-container">
+
+        <!-- ÍCONE -->
+        
         <p>
-           EscalaPlanner é um aplicativo desenvolvido para profissionais que trabalham em regime 12×36, oferecendo uma forma simples, 
-            confiável e inteligente de consultar a escala de trabalho.
-            Com ele, o usuário descobre imediatamente se irá trabalhar ou folgar em qualquer data desejada, 
+            EscalaPlanner é um aplicativo desenvolvido para profissionais que trabalham em regime 12×36,
+            permitindo consultar facilmente se irá trabalhar ou folgar em qualquer data desejada, 
             evitando erros de cálculo e facilitando o planejamento pessoal.
 
             Criado para quem valoriza organização, o EscalaPlanner combina precisão, design limpo e funcionalidade prática, garantindo uma experiência rápida e intuitiva.
+            
         </p>
-    </div>
 
-    <div class="projeto">
-        <h3>ValidApp</h3>
-        <span class="tag">Kivy/KivyMD</span>
-        <span class="tag">Python</span>
-        <span class="tag">Firebase</span>
-        <p>
-            App completo para controle de validade de produtos.  
-            Permite cadastro, leitura de código de barras, OCR,
-            filtro por data, filtro por setor, sincronização com Firebase
-            e geração de PDFs direto no Android.
-        </p>
-    </div>
+        <!-- IMAGENS -->
+        <div class="app-images">
 
-    <div class="projeto">
-        <h3>Word_Price</h3>
-        <span class="tag">Kivy</span>
-        <span class="tag">IA (em pausa)</span>
-        <p>
-            Aplicativo onde o usuário fotografa produtos e preços.
-            O sistema armazena a imagem e registra o valor, permitindo
-            consultar preços anteriores. Projeto com ideia futura de machine learning
-            para recomendar produtos semelhantes.
-        </p>
-    </div>
+        <img src="https://raw.githubusercontent.com/WinnePQD/escala-12x36/main/ic_launcher.png" 
+         alt="Ícone do app">
+         
+         <img src="https://raw.githubusercontent.com/WinnePQD/escala-12x36/main/Screenshot_2026-03-27-01-45-26-292_com.example.escala12x36.jpg" 
+         alt="Tela inicial">
 
-    <div class="projeto">
-        <h3>Price World</h3>
-        <span class="tag">Android</span>
-        <span class="tag">Python</span>
-        <p>
-            Projeto voltado ao registro e análise de preços, oferecendo
-            um banco de dados na nuvem para que outros usuários consultem
-            preços e estabelecimentos.
-        </p>
-    </div>
+        <img src="https://raw.githubusercontent.com/WinnePQD/escala-12x36/main/Screenshot_2026-03-27-01-44-59-327_com.example.escala12x36.jpg" 
+         alt="Tela inicial">
 
-    <div class="projeto">
-        <h3>App OCR Nota Fiscal</h3>
-        <span class="tag">OCR</span>
-        <span class="tag">Firebase</span>
-        <p>
-            Projeto para extrair dados de notas fiscais através de foto,
-            usando OCR e processamento automático.
-        </p>
+         
+         <img src="https://raw.githubusercontent.com/WinnePQD/escala-12x36/main/Screenshot_2026-03-27-01-45-15-882_com.example.escala12x36.jpg" 
+         alt="Tela inicial">
+         
+
+         <img src="https://raw.githubusercontent.com/WinnePQD/escala-12x36/main/Screenshot_2026-03-27-01-45-21-966_com.example.escala12x36.jpg" 
+         alt="Tela inicial">
+         
+
+         
+
+
+
+        </div>
+        <!-- BOTÃO -->
+        
+        <a href="https://github.com/WinnePQD/escala-12x36/releases/download/v2/escala12x36.apk"
+         class="botao-download"
+         target="_blank">
+
+          <img src="https://raw.githubusercontent.com/WinnePQD/escala-12x36/main/ic_launcher.png" 
+               alt="Ícone">
+
+          Baixar O APP
+
+        </a>
+        
+
     </div>
+</div>
+
+<!-- OUTROS PROJETOS -->
+<div class="projeto">
+    <h3>ValidApp</h3>
+    <span class="tag">Kivy/KivyMD</span>
+    <span class="tag">Python</span>
+    <span class="tag">Firebase</span>
+    <p>
+        App completo para controle de validade de produtos com leitura de código de barras,
+        OCR, filtros e geração de PDFs.
+    </p>
+</div>
+
+<div class="projeto">
+    <h3>Word_Price</h3>
+    <span class="tag">Kivy</span>
+    <span class="tag">IA (em pausa)</span>
+    <p>
+        Aplicativo que registra preços através de fotos e permite consultas futuras.
+    </p>
+</div>
+
+<div class="projeto">
+    <h3>Price World</h3>
+    <span class="tag">Android</span>
+    <span class="tag">Python</span>
+    <p>
+        Plataforma colaborativa para consulta e registro de preços em mercados.
+    </p>
+</div>
+
+<div class="projeto">
+    <h3>App OCR Nota Fiscal</h3>
+    <span class="tag">OCR</span>
+    <span class="tag">Firebase</span>
+    <p>
+        Extração automática de dados de notas fiscais via imagem.
+    </p>
+</div>
 
 </section>
 
@@ -164,22 +311,20 @@
     <h2>Habilidades Técnicas</h2>
     <p>
         ✔ Python para Android  
-        ✔ Kivy / KivyMD 
-        ✔ Java
-        ✔ Firebase Realtime Database  
-        ✔ Estruturas modulares com múltiplas telas  
-        ✔ Hot Reload com trio e BaseApp  
-        ✔ Integração com câmera, QR Code e código de barras  
-        ✔ Geração de PDFs no Android  
-        ✔ Consumo de APIs  
-        ✔ Análise de dados com Excel / Pandas  
+        ✔ Kivy / KivyMD  
+        ✔ Java  
+        ✔ Firebase  
+        ✔ OCR / QR Code / Código de barras  
+        ✔ Geração de PDFs  
+        ✔ APIs  
+        ✔ Excel / Pandas  
     </p>
 </section>
 
 <section class="links">
     <h2>Links</h2>
     <p>GitHub: <a href="https://github.com/WinnePQD" target="_blank">github.com/WinnePQD</a></p>
-    <p>Email profissional: <strong>winneengenharia@gmail.com</strong></p>
+    <p>Email: <strong>winneengenharia@gmail.com</strong></p>
 </section>
 
 <footer>
