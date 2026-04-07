@@ -25,10 +25,8 @@
         display: flex;
         flex-direction: row;      /* Lado a lado no PC */
         flex-wrap: wrap;         /* 🔥 Pula pra baixo se o texto encostar no ícone */
-        /*justify-content: center;*/
-        justify-content: flex-wrap;     /* Centraliza o conjunto na tela */
+        justify-content: center;     /* Centraliza o conjunto na tela */
         align-items: center;     /* Alinha ícone e texto verticalmente */
-       /* gap: 40px;*/ 
         position: relative;     /* Espaço entre ícone e texto */
         text-align: center;
     }
@@ -36,15 +34,19 @@
 
        
     .app-icon {
+        position: absolute; 
+        left: 5%;
       
-        display: flex;
-        justify-content: center;
+        /*display: flex;
+        justify-content: center;*/
     }
 
     .app-icon img {
         width: 250px;             /* Tamanho no PC */
         border-radius: 50%;
-        transition: 0.3s;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+
+        /*transition: 0.3s;*/
     }
 
 
