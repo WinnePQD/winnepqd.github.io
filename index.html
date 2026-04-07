@@ -18,13 +18,15 @@
     /* ===== HEADER REFORMULADO (MÁGICA DO FLEXBOX) ===== */
     header {
         background: linear-gradient(135deg, #4A00E0, #8E2DE2);
-        padding: 60px 20px;
+        /*padding: 60px 20px;*/
+        padding: 40px 5%;
         color: white;
         
         display: flex;
         flex-direction: row;      /* Lado a lado no PC */
         flex-wrap: wrap;         /* 🔥 Pula pra baixo se o texto encostar no ícone */
-        justify-content: center;  /* Centraliza o conjunto na tela */
+        /*justify-content: center;*/
+        justify-content: flex-start;     /* Centraliza o conjunto na tela */
         align-items: center;     /* Alinha ícone e texto verticalmente */
         gap: 40px;               /* Espaço entre ícone e texto */
         text-align: center;
@@ -32,7 +34,7 @@
 
     .app-icon {
         display: flex;
-        justify-content: left;
+        justify-content: center;
     }
 
     .app-icon img {
