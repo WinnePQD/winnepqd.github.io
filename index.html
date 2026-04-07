@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Winne Ferreira - Desenvolvedor Mobile Python</title>
 
-
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    @import url('https://googleapis.com');
 
     body {
         margin: 0;
@@ -17,81 +15,65 @@
         color: #222;
     }
 
+    /* ===== HEADER REFORMULADO (MÁGICA DO FLEXBOX) ===== */
     header {
-    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
-    padding: 40px 20px;
-    color: white;
-
-    position: relative;   /* 🔥 necessário */
-    text-align: center;   /* 🔥 centraliza o texto */
+        background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+        padding: 60px 20px;
+        color: white;
+        
+        display: flex;
+        flex-direction: row;      /* Lado a lado no PC */
+        flex-wrap: wrap;         /* 🔥 Pula pra baixo se o texto encostar no ícone */
+        justify-content: center;  /* Centraliza o conjunto na tela */
+        align-items: center;      /* Alinha ícone e texto verticalmente */
+        gap: 40px;               /* Espaço entre ícone e texto */
+        text-align: center;
     }
-    
-    header div:last-child {
-    text-align: center;
-    }
 
-    /* Ícone fixo na esquerda */
     .app-icon {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
     }
 
     .app-icon img {
-    width: 250px;
-    border-radius: 50%;
+        width: 250px;             /* Tamanho no PC */
+        border-radius: 50%;
+        transition: 0.3s;
     }
-
-        /* //////INICIO CELULAR////// */
-
-    @media (max-width: 999px) {
-
-      header {
-          padding: 20px 10px;
-          flex-direction: column;     /* 🔥 empilha */
-          align-items: center;
-          display: flex;   
-          justify-content:center;          /* 🔥 centraliza tudo */
-              /* 🔥 diminui espaço exagerado */
-      }
-  
-      .app-icon {
-          position: static; 
-          display: flex;
-          justify-content: center;
-          margin-bottom: 1px;
-          transform: none;          /* 🔥 aproxima do nome */
-      }
-  
-      .app-icon img {
-          width: 120px;
-          display:block;          /* 🔥 tamanho ideal (nem pequeno nem gigante) */
-      }
-  
-      header h1 {
-          font-size: 26px;
-          margin: 5px 0px; /* 🔥 tira espaço extra */
-      }
-  
-      header p {
-          font-size: 15px;
-          margin: 0;
-      }
-  }
-
-/* //////FIM  CELULAR////// */
 
     header h1 {
         font-size: 50px;
-        margin-bottom: 10px;
+        margin: 0 0 10px 0;
     }
 
     header p {
-        font-size: 28px;
+        font-size: 24px;
+        max-width: 600px;         /* Evita que o texto fique largo demais no PC */
         opacity: 0.9;
+        margin: 0;
     }
 
+    /* ===== AJUSTES PARA TELAS MENORES (CELULAR/TABLET) ===== */
+    @media (max-width: 999px) {
+        header {
+            padding: 40px 20px;
+            gap: 20px;            /* Diminui o espaço entre eles no celular */
+        }
+
+        .app-icon img {
+            width: 150px;         /* Tamanho ideal para celular */
+        }
+
+        header h1 {
+            font-size: 32px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+    }
+
+    /* ===== RESTANTE DO CONTEÚDO ===== */
     section {
         max-width: 900px;
         margin: 40px auto;
@@ -101,32 +83,25 @@
         box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
-    h2 {
-        color: #4A00E0;
-        font-size: 32px;
-    }
-    h3 {
-      font-size: 28px;
-    }
+    h2 { color: #4A00E0; font-size: 32px; }
+    h3 { font-size: 28px; }
 
     .projeto p {
         margin-bottom: 25px;
-        font-size: 20px;
+        font-size: 18px;
         text-align: left;
     }
     
-    
     .projeto::after {
-      content: "";
-      display: block;
-      margin-top: 30px;
-      border-bottom: 1px solid #ddd;
+        content: "";
+        display: block;
+        margin-top: 30px;
+        border-bottom: 1px solid #ddd;
     }
 
     .sobre {
-        font-size: 20px;
-        margin-bottom: 25px;
-        text-align: left;
+        font-size: 18px;
+        line-height: 1.6;
     }
     
     footer {
@@ -142,35 +117,16 @@
         color: white;
         padding: 4px 10px;
         border-radius: 8px;
-        font-size: 20px;
+        font-size: 16px;
         margin-right: 6px;
+        display: inline-block;
+        margin-bottom: 10px;
     }
-
-    .links a {
-        text-decoration: none;
-        color: #8E2DE2;
-        font-weight: 600;
-    }
-
-    .links a:hover {
-        text-decoration: underline;
-    }
-
-    /* ===== APP AREA ===== */
-
-    .app-container {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-
 
     .app-images {
         display: flex;
-        flex-direction: row;
         justify-content: center;
-        align-items: center;
-        gap: 20px;
+        gap: 15px;
         margin: 20px 0;
         flex-wrap: wrap;
     }
@@ -182,40 +138,29 @@
     }
 
     .botao-download {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;  /* centraliza horizontal */
-    gap: 10px;
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: linear-gradient(135deg, #4A00E0, #8E2DE2);
-    color: white;
-    border-radius: 12px;
-    text-align: center;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 20px;
-    transition: 0.3s;
-  }
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 25px;
+        background: linear-gradient(135deg, #4A00E0, #8E2DE2);
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+    }
 
-  .botao-download img {
-      width: 35px;
-      height: 35px;
-      border-radius: 6px;
-  }
+    .botao-download:hover {
+        transform: scale(1.05);
+    }
 
-  .botao-download:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
-  
-  }
+    .botao-download img {
+        width: 30px;
+        height: 30px;
+    }
 </style>
-
-
 </head>
-
 <body>
-
 <header>
 
   <div class= "app-icon">
